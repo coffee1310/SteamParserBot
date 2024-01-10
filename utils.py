@@ -45,6 +45,8 @@ def get_items(user_id):
         cursor.execute("SELECT item_name FROM items WHERE id = ?", i)
         items.append(*cursor.fetchall()[0])
 
+    connection.commit()
+    connection.close()
     return items
 
 def get_item_info(user_id, item_name):
@@ -57,6 +59,14 @@ def get_item_info(user_id, item_name):
 
     return results
 
+def parse_item(item_id, user_id):
+    connection = sqlite3.Connection("items.db")
+    cursor = connection.cursor()
+    cursor.execute("SELECT id, link FROM prices WHERE item_id = ?", (item_id,))
+    results = cursor.fetchone()
+    information = get_item_information(results[1])
+    cursor.execute("INSERT INTO items (user_id, item_id, item_price, date_changed)"
+                   "VALUES (?, ?, ?, ?, ?)", (user_id, information[0], information[1], datetime.datetime.now()))
 
 class Item:
     def __init__(self, items:list, user_id: str):

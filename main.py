@@ -22,7 +22,6 @@ def callback(callback):
         bot.send_message(callback.message.chat.id, f"*{info[0][1]}*\n"
                                                    f"   Название: {callback.data[5:]}\n"
                                                    f"   Цена: {info[0][0]}\n ", parse_mode="Markdown")
-
 @bot.message_handler(commands=["enter_links"])
 def enter_items(message: telebot.types.Message):
     if message.chat.id in last_time_message:
