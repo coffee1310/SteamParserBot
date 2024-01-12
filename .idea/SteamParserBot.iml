@@ -4,7 +4,11 @@
     <content url="file://$MODULE_DIR$">
       <excludeFolder url="file://$MODULE_DIR$/venv" />
     </content>
+<<<<<<< HEAD
     <orderEntry type="jdk" jdkName="Python 3.9 (SteamParserBot)" jdkType="Python SDK" />
+=======
+    <orderEntry type="inheritedJdk" />
+>>>>>>> 8a99bde8194d5470a4499fce6aa57265abf2e66d
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>

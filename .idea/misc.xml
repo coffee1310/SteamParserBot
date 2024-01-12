@@ -1,4 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.9 (SteamParserBot)" project-jdk-type="Python SDK" />
+=======
+  <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (SteamParserBot)" project-jdk-type="Python SDK" />
+>>>>>>> 8a99bde8194d5470a4499fce6aa57265abf2e66d
 </project>
